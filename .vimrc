@@ -145,7 +145,7 @@ let g:DoxygenToolkit_paramTag_pre="@Param "
 let g:DoxygenToolkit_returnTag="@Returns   "
 let g:DoxygenToolkit_blockHeader="-------------------------------"
 let g:DoxygenToolkit_blockFooter="---------------------------------"
-let g:DoxygenToolkit_authorName="Sergio Prado <sergio.prado@e-labworks.com>"
+let g:DoxygenToolkit_authorName="Michel Martinez <michelsm1990@gmail.com>"
 let g:DoxygenToolkit_licenseTag="MIT"
 
 " MyNext() and MyPrev(): Movement between tabs OR buffers
