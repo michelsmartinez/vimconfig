@@ -1,3 +1,8 @@
+" para corrigir o ycmd down
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+
+
 " this is to receive CTRL-S and CTRL-Q
 silent !stty -ixon > /dev/null 2>/dev/null
 
@@ -12,8 +17,16 @@ call vundle#begin()
 " plugin to enable Vundle 
 Plugin 'VundleVim/Vundle.vim'
 
+" Plugin 'yggdroot/indentline'
+" autocomplete com tabs :)
+Plugin 'ervandew/supertab'
+
 " Autocomplete
-Plugin 'valloric/youcompleteme'
+"Plugin 'valloric/youcompleteme' "-> parou de funcionar
+Plugin 'davidhalter/jedi'
+
+" comprime as funções (za comprme / descomprime)
+Plugin 'tmhedberg/SimpylFold'
 
 " plugin to make git diff display in files
 Plugin 'airblade/vim-gitgutter'
@@ -79,6 +92,22 @@ call vundle#end()
 filetype plugin indent on
 filetype on
 
+
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 " disable Linux Kernel Coding Style
 let g:loaded_linuxsty=1
 
@@ -115,8 +144,9 @@ set ruler
 syntax on
 "colorscheme atom  "normalmente uso este
 "set background=dark
-" turn line numbers on
+"turn line numbers of
 "set number
+set nonu
 
 " set mouse=a
 
@@ -145,7 +175,7 @@ let g:DoxygenToolkit_paramTag_pre="@Param "
 let g:DoxygenToolkit_returnTag="@Returns   "
 let g:DoxygenToolkit_blockHeader="-------------------------------"
 let g:DoxygenToolkit_blockFooter="---------------------------------"
-let g:DoxygenToolkit_authorName="Michel Martinez <michelsm1990@gmail.com>"
+let g:DoxygenToolkit_authorName="Michel Martinez <michel.martinez@cwi.com.br>"
 let g:DoxygenToolkit_licenseTag="MIT"
 
 " MyNext() and MyPrev(): Movement between tabs OR buffers
@@ -279,6 +309,11 @@ nnoremap <C-o> <ESC>:NERDTreeToggle<CR>
 " (CTRL_A, CTRL-I) change to *.C/*.H file 
 nnoremap <C-a> <ESC>:A<CR>
 nnoremap <C-i> <ESC>:IH<CR>
+
+" (CTRL_C) copia o que for selecionado em visual mode para a área de
+" transferência
+map <C-c> "+y
+
 
 " (CTRL-P) go back to previous tag
 nnoremap <C-p> <ESC>:pop<CR>
