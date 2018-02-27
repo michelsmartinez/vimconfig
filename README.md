@@ -18,3 +18,10 @@ Salve e feche
 3) Abra o Vim
 
 Rode :PluginInstall
+
+
+# Opcional:
+
+Caso queira pode executar diretamente o ./install.sh
+ele irá criar links simbólicos para os arquivos na home
+cuidado apagará seus antigos!

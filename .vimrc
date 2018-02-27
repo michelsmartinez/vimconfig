@@ -1,27 +1,25 @@
-" para corrigir o ycmd down
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
+"this is to receive CTRL-S and CTRL-Q
+"silent !stty -ixon > /dev/null 2>/dev/null
 
-" this is to receive CTRL-S and CTRL-Q
-silent !stty -ixon > /dev/null 2>/dev/null
-
-" disable vi compatibility (emulation of old bugs)
+"disable vi compatibility (emulation of old bugs)
 set nocompatible
 
-" setup Vundle (run :PluginInstall to install plugins)
+"setup Vundle (run :PluginInstall to install plugins)
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" plugin to enable Vundle 
+"plugin to enable Vundle 
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'yggdroot/indentline'
-" autocomplete com tabs :)
+"Plugin 'yggdroot/indentline'
+"autocomplete com tabs :)
 Plugin 'ervandew/supertab'
 
-" Autocomplete
+"Autocomplete
 "Plugin 'valloric/youcompleteme' "-> parou de funcionar
 Plugin 'davidhalter/jedi'
 
@@ -148,7 +146,7 @@ syntax on
 "set number
 set nonu
 
-" set mouse=a
+set mouse=a
 
 " highlight matching braces
 set showmatch
