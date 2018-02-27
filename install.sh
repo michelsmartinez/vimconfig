@@ -1,9 +1,9 @@
 #!/bin/bash
 
-PATH="${PWD}"
+PATH_INSTALL="${PWD}"
 
 echo "Workdir:"
-echo "--> $PATH"
+echo "--> $PATH_INSTALL"
 
 echo -n "This will erease your vimrc and vim folder from your HOME, confirm? y/n    "; read confirm
 if [ $confirm == "y" ] ; then
@@ -11,7 +11,7 @@ if [ $confirm == "y" ] ; then
     /bin/rm ~/.vimrc
     /bin/rm ~/.vim
     echo "make a link to news files"
-    /bin/ln -s $PATH/.vimrc ~/.vimrc  
-    /bin/ln -s $PATH/.vim ~/.vim 
+    /bin/ln -s $PATH_INSTALL/.vimrc ~/.vimrc  
+    /bin/ln -s $PATH_INSTALL/.vim ~/.vim 
 fi
 echo "Done, use Vim ;)"
