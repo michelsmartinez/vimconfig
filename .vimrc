@@ -90,9 +90,6 @@ call vundle#end()
 filetype plugin indent on
 filetype on
 
-" Comentário de exemplo
-
-
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
